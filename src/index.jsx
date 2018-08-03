@@ -8,6 +8,7 @@ import reduxPromise from 'redux-promise';
 
 // reducers
 import movieReducer from './reducers/movie_reducer';
+import activeMovieReducer from './reducers/movie_reducer';
 
 
 // internal modules
@@ -33,7 +34,7 @@ const initialState = {
 
 const reducers = combineReducers({
   movie: movieReducer,
-  activeMovie: (state = null, action) => state,
+  activeMovie: activeMovieReducer,
 });
 
 const middlewares = applyMiddleware(reduxPromise, logger);

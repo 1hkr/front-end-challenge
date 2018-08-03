@@ -8,9 +8,9 @@ export function fetchMovie(query) {
   };
 }
 
-export function setActiveCity(activeCity) {
+export function setActiveMovie(activeMovie) {
   return {
-    type: 'SET_ACTIVE_CITY',
-    payload: activeCity
+    type: 'SET_ACTIVE_MOVIE',
+    payload: activeMovie
   };
 }

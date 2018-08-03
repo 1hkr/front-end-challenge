@@ -1,14 +1,24 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { setActiveMovie } from '../actions/index';
 
-const Movie = (props) => {
+class Movie extends Component {
+  render () {
     return (
-      <div className="movie">
-      <img src ={"https://image.tmdb.org/t/p/w500/" + props.movie.poster_path} />
-      <h1>{props.movie.title}</h1>
+      <div className="movie" onClick={() => this.props.setActiveMovie(this.props.movie)}>
+      <img src ={"https://image.tmdb.org/t/p/w500/" + this.props.movie.poster_path} />
+      <h1>{this.props.movie.title}</h1>
       </div>
     );
-  };
+  }
+}
 
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators(
+    { setActiveMovie },
+    dispatch
+  );
+}
 
-export default Movie;
+export default connect(null, mapDispatchToProps)(Movie);

@@ -22,8 +22,8 @@ render() {
     <div
     className="active-movie"
     style={{
-      background: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${url})`,
-      backgroundSize: 'cover',
+      background: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${url}), center`,
+      backgroundSize: 'cover !important',
       backgroundPositionX: 'center'
     }}
     >
