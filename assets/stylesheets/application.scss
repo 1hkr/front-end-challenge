@@ -23,6 +23,7 @@ body {
     color: rgb(239, 237, 241);
     &:focus {
       box-shadow: none;
+      outline: none;
     }
   }
 
