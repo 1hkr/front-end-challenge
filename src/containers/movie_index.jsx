@@ -1,25 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
 
-class Movie extends Component {
-
-  render() {
+const Movie = (props) => {
     return (
       <div className="movie">
-      <img src ={"https://image.tmdb.org/t/p/w500/" + this.props.movie.poster_path} />
-      <h1>{this.props.movie.title}</h1>
+      <img src ={"https://image.tmdb.org/t/p/w500/" + props.movie.poster_path} />
+      <h1>{props.movie.title}</h1>
       </div>
     );
-  }
-}
-
-
-function mapStateToProps(state) {
-  return {
-    movie: state.movie
   };
-}
 
 
-export default connect(mapStateToProps)(Movie);
+export default Movie;

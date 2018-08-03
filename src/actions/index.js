@@ -7,3 +7,10 @@ export function fetchMovie(query) {
     payload: promise
   };
 }
+
+export function setActiveCity(activeCity) {
+  return {
+    type: 'SET_ACTIVE_CITY',
+    payload: activeCity
+  };
+}
