@@ -1,4 +1,4 @@
-const activeMovieReducer = (state, action) => {
+const activeMovieReducer = (state = null, action) => {
   if (state === undefined) {
   // Reducer initialisation
     return [];

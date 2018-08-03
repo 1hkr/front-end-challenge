@@ -1,14 +1,12 @@
 import React from 'react';
-import SearchBar from '../containers/search_bar';
+import MovieIndex from '../containers/movie_index';
 import ActiveMovie from '../containers/active_movie'
 
 const App = () => {
   return (
     <div className="app">
-        <SearchBar/>
-      <div className="right-scene">
+        <MovieIndex/>
         <ActiveMovie/>
-      </div>
     </div>
   );
 };

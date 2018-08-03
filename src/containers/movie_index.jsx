@@ -1,24 +1,41 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { setActiveMovie } from '../actions/index';
+import { fetchMovie } from '../actions/index';
+import Movie from '../containers/movie';
 
-class Movie extends Component {
-  render () {
+class MovieIndex extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = { value: '' };
+  }
+
+  handleChange = (event) => {
+    this.setState({ value: event.target.value });
+    this.props.fetchMovie(this.state.value);
+  }
+
+  render() {
+    console.log(this.props.movie)
     return (
-      <div className="movie" onClick={() => this.props.setActiveMovie(this.props.movie)}>
-      <img src ={"https://image.tmdb.org/t/p/w500/" + this.props.movie.poster_path} />
-      <h1>{this.props.movie.title}</h1>
-      </div>
+    <div className="left-scene">
+      <input type="text" value={this.state.value} onChange={this.handleChange} className="Form-control form-search"/>
+      <Movie movie={this.props.movie}/>
+    </div>
     );
   }
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators(
-    { setActiveMovie },
-    dispatch
-  );
+  return bindActionCreators({ fetchMovie }, dispatch);
 }
 
-export default connect(null, mapDispatchToProps)(Movie);
+
+function mapStateToProps(state) {
+  return {
+    movie: state.movie
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(MovieIndex);

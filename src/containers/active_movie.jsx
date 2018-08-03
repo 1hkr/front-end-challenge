@@ -20,6 +20,7 @@ render() {
 
 
   return (
+    <div className="right-scene">
     <div
     className="active-movie"
     style={{
@@ -31,6 +32,7 @@ render() {
       <h1>{ title }</h1>
       <h2>{ vote }</h2>
       <h4>{ overview }</h4>
+    </div>
     </div>
   );
 };
