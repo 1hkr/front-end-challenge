@@ -3,15 +3,16 @@ import { connect } from 'react-redux';
 
 class ActiveMovie extends Component {
 
-//  if (!props.activeMovie.title) {
-//    return (
-//      <div className="active-movie">
-//        <p>Select a movie...</p>
-//      </div>
-//    );
-//  }
-
 render() {
+ if (!this.props.activeMovie.title) {
+  return (
+  <div className="active-movie">
+    <p>Select a movie...</p>
+    </div>
+    );
+}
+
+
   const title = this.props.activeMovie.title;
   const overview = this.props.activeMovie.overview;
   const vote = this.props.activeMovie.vote_average;
@@ -22,8 +23,8 @@ render() {
     <div
     className="active-movie"
     style={{
-      background: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${url}), center`,
-      backgroundSize: 'cover !important',
+      background: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${url})`,
+      backgroundSize: 'cover',
       backgroundPositionX: 'center'
     }}
     >
