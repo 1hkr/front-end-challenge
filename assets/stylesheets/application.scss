@@ -53,6 +53,18 @@ body {
   }
 }
 
+  .active-movie {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #9D9C9E;
+    padding: 20px;
+    height: 100vh;
+    background: rgba(120, 0, 0, 0.5);
+
+  }
+
 .right-scene {
   flex: 0 0 40%;
   background-color: #272625;
