@@ -37,6 +37,20 @@ body {
     opacity: 0.4;
     color: rgb(239, 237, 241);
   }
+
+  .movie {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #9D9C9E;
+
+    img {
+      height: 40vh;
+    }
+
+  }
 }
 
 .right-scene {
