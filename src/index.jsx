@@ -18,9 +18,12 @@ import '../assets/stylesheets/application.scss';
 const initialState = {
   movie: {
     id:1,
-    title: "Avengers: Infinity War",
-    poster_path: "/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
-    overview:"As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment - the fate of Earth and existence itself has never been more uncertain."
+    title: "The Jungle Book",
+    poster_path: "/vOipe2myi26UDwP978hsYOrnUWC.jpg",
+    overview:"A man-cub named Mowgli fostered by wolves. After a threat from the tiger Shere Khan, Mowgli is forced to flee the jungle, by which he embarks on a journey of self discovery with the help of the panther, Bagheera and the free-spirited bear, Baloo.",
+    backdrop_path: "/eIOTsGg9FCVrBc4r2nXaV61JF4F.jpg",
+    vote_average: 6.8,
+    original_language: "en"
   },
   activeMovie:{}
 };

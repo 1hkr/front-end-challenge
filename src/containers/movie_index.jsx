@@ -17,7 +17,6 @@ class MovieIndex extends Component {
   }
 
   render() {
-    console.log(this.props.movie)
     return (
     <div className="left-scene">
       <input type="text" value={this.state.value} onChange={this.handleChange} className="Form-control form-search"/>
