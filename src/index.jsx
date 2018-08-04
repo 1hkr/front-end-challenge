@@ -23,7 +23,8 @@ const initialState = {
     overview:"A man-cub named Mowgli fostered by wolves. After a threat from the tiger Shere Khan, Mowgli is forced to flee the jungle, by which he embarks on a journey of self discovery with the help of the panther, Bagheera and the free-spirited bear, Baloo.",
     backdrop_path: "/eIOTsGg9FCVrBc4r2nXaV61JF4F.jpg",
     vote_average: 6.8,
-    original_language: "en"
+    original_language: "en",
+    release_date: "2016-04-07"
   },
   activeMovie:{}
 };

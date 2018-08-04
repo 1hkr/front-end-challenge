@@ -18,6 +18,7 @@ render() {
   const vote = this.props.activeMovie.vote_average;
   const url = `https://image.tmdb.org/t/p/w500/${this.props.activeMovie.backdrop_path}`;
   const OV = this.props.activeMovie.original_language;
+  const date = this.props.activeMovie.release_date;
 
 
   return (
@@ -35,7 +36,7 @@ render() {
         <h3>{ vote }</h3>
       </div>
       <h4>{ overview }</h4>
-      <p>OV: {OV.toUpperCase()}</p>
+      <p>Version: {OV.toUpperCase()}, {date.substr(0,4)}</p>
     </div>
     </div>
   );
