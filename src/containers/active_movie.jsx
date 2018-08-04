@@ -7,7 +7,7 @@ render() {
  if (!this.props.activeMovie.title) {
   return (
   <div className="active-movie">
-    <p>Select a movie...</p>
+    <p>Click on a movie to learn more...</p>
     </div>
     );
 }
