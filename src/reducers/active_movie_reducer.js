@@ -5,7 +5,7 @@ const activeMovieReducer = (state = null, action) => {
   }
   // TODO: handle some actions
   switch (action.type) {
-    case 'SET_ACTIVE_MOVIE':
+    case 'MOVIE_SELECTED':
       return action.payload;
     default:
       return state;

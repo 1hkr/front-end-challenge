@@ -8,9 +8,9 @@ export function fetchMovie(query) {
   };
 }
 
-export function setActiveMovie(activeMovie) {
+export function selectMovie(activeMovie) {
   return {
-    type: 'SET_ACTIVE_MOVIE',
+    type: 'MOVIE_SELECTED',
     payload: activeMovie
   };
 }

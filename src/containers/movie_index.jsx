@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { fetchMovie } from '../actions/index';
-import Movie from '../containers/movie';
+import Movie from '../components/movie';
 
 class MovieIndex extends Component {
 
